@@ -3,7 +3,7 @@ import { HelloWorld } from "@bigyanpoudel/hello-world-v10";
 function App() {
   return (
     <div className="App">
-      <HelloWorld text="testing" />
+      <HelloWorld text="Hello" />
     </div>
   );
 }
