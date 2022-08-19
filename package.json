@@ -6,7 +6,7 @@
   "description": "This is testing to create npm package",
   "main": "./dist/@bigyanpoudel/hello-world-v10.umd.js",
   "module": "./dist/@bigyanpoudel/hello-world-v10.es.js",
-  "types": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/@bigyanpoudel/hello-world-v10.es.js",
