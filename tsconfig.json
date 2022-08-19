@@ -17,11 +17,11 @@
     "jsx": "react-jsx",
     "declaration": true,
     "typeRoots": [
-      "index.d.ts",
-      "./node_modules/@types"
+      "lib/index.d.ts",
+      "node_modules/@types"
     ]
   },
-  "include": ["lib/"],
+  "include": ["lib"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules"]
 }
