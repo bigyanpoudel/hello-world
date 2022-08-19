@@ -18,8 +18,10 @@
     "baseUrl": ".",
     "paths": {
       "@bigyanpoudel/hello-world-v10": [ "./lib/hello-world.tsx" ]
-    }
+    },
+    "declaration": true
   },
-  "include": ["src", "lib/hello-world.tsx"],
+  "include": ["lib/hello-world.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules"]
 }
