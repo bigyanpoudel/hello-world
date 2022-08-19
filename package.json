@@ -22,8 +22,8 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "16.8.0 || 17.x",
-    "react-dom": "16.8.0 || 17.x"
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
