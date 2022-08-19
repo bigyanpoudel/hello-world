@@ -4,13 +4,13 @@
   "version": "0.0.19",
   "type": "module",
   "description": "This is testing to create npm package",
-  "main": "./dist/@bigyanpoudel/hello-world-v10.umd.js",
-  "module": "./dist/@bigyanpoudel/hello-world-v10.es.js",
+  "main": "./dist/@bigyanpoudel/hello-world-v10.es.js",
+  "module": "./dist/@bigyanpoudel/hello-world-v10.cjs.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/@bigyanpoudel/hello-world-v10.es.js",
-      "require": "./dist/@bigyanpoudel/hello-world-v10.umd.js"
+      "require": "./dist/@bigyanpoudel/hello-world-v10.cjs.js"
     }
   },
   "scripts": {

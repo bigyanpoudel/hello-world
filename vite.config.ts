@@ -15,7 +15,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "lib/index.ts"),
       name: "MyLib",
-      formats: ["es", "umd"],
+      formats: ["cjs", "es"],
       fileName: (format) => `@bigyanpoudel/hello-world-v10.${format}.js`,
     },
     rollupOptions: {
