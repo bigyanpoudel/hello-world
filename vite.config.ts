@@ -8,9 +8,9 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, "lib/index.ts"),
-      name: "MyLib",
+      name: "lib",
       formats: ["es", "umd"],
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `@bigyanpoudel/hello-world-v10.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
