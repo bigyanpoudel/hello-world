@@ -6,7 +6,4 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["vite.config.ts"],
-  "paths": {
-    "@bigyanpoudel/hello-world-v10": [ "./lib/hello-world.tsx" ]
-  } //p
 }
