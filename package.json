@@ -16,9 +16,9 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "copy-files": "copyfiles -e  **/**.ts -e **/**.tsx -u ",
-    "tsc": "yarn run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && yarn run copy-files",
+    "tsc": "yarn run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "build": "yarn run tsc && vite build"
   },
   "files": [
