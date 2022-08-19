@@ -1,4 +1,4 @@
-interface IHelloWorldProps {
+export interface IHelloWorldProps {
   text: string;
   className?: string;
 }

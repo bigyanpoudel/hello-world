@@ -14,7 +14,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, "lib/index.ts"),
-      name: "lib",
+      name: "MyLib",
       formats: ["es", "umd"],
       fileName: (format) => `@bigyanpoudel/hello-world-v10.${format}.js`,
     },

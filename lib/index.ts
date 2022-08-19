@@ -1,1 +1,2 @@
-export * from "./hello-world";
+export { HelloWorld } from "./hello-world";
+export type { IHelloWorldProps } from "./hello-world";
