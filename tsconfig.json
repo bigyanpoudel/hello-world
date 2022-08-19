@@ -17,11 +17,10 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@bigyanpoudel/hello-world-v10": [ "./lib/hello-world.tsx" ]
+      "@bigyanpoudel/hello-world-v10": [ "./lib/index.ts" ]
     },
     "declaration": true
   },
-  "include": ["lib/hello-world.tsx"],
+  "include": ["lib/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["node_modules"]
 }

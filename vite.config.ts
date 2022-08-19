@@ -5,13 +5,21 @@ import path from "node:path";
 export default defineConfig({
   plugins: [react()],
   build: {
+    sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "lib/hello-world.tsx"),
-      name: "ReactFeatureFlag",
-      fileName: (format) => `hello-world.${format}.js`, //put the name of your lib
+      entry: path.resolve(__dirname, "lib/index.ts"),
+      name: "MyLib",
+      formats: ["es", "umd"],
+      fileName: (format) => `my-lib.${format}.js`,
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
   },
 });
