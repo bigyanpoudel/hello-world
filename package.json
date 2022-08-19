@@ -6,7 +6,7 @@
   "description": "This is testing to create npm package",
   "main": "./dist/hello-world.umd.js",
   "module": "./dist/hello-world.es.js",
-  "types": "./dist/lib/hello-world.d.ts",
+  "types": "./dist/lib/@types/hello.ts",
   "exports": {
     ".": {
       "import": "./dist/hello-world.es.js",
@@ -29,10 +29,10 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
   },
   "repository": {
     "type": "git",
@@ -44,5 +44,8 @@
     "url": "https://github.com/bigyanpoudel/hello-world/issues"
   },
   "homepage": "https://github.com/bigyanpoudel/hello-world#readme",
-  "license": "0BSD"
+  "license": "0BSD",
+  "dependencies": {
+    "@bigyanpoudel/hello-world-v10": "^0.0.7"
+  }
 }
