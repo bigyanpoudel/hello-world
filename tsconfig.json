@@ -15,12 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@bigyanpoudel/hello-world-v10": [ "./lib/index.ts" ]
-    },
     "declaration": true
   },
-  "include": ["lib/index.ts"],
+  "include": ["./lib"],
   "references": [{ "path": "./tsconfig.node.json" }],
 }
