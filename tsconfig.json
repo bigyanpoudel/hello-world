@@ -14,8 +14,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@bigyanpoudel/hello-world-v10": [ "./lib/hello-world.tsx" ]
+    }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "lib/hello-world.tsx"],
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

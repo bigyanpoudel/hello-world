@@ -1,5 +1,5 @@
 import "./App.css";
-import { HelloWorld } from "./component/helloWorld";
+import { Hell } from "@bigyanpoudel/hello-world-v10";
 function App() {
   return (
     <div className="App">
