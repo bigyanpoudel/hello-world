@@ -14,12 +14,13 @@
     "noEmit": true,
     "jsx": "react",
     "declaration": true,
-    "typeRoots": [
-      "lib/index.d.ts",
-      "node_modules/@types"
-    ],
     "skipLibCheck": true,
-     "esModuleInterop": true 
+     "esModuleInterop": true ,
+     "declarationMap": true,
+     "baseUrl": ".",
+     "paths": {
+      "@bigyanpoudel/hello-world-v10": ["src/*"]
+    }
   },
   "include": ["lib"],
   "references": [{ "path": "./tsconfig.node.json" }],
