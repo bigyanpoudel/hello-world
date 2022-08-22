@@ -15,7 +15,6 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "esModuleInterop": true ,
-    "outDir": "./dist/es"
   },
   "include": ["./src/components"],
   "references": [{ "path": "./tsconfig.node.json" }],

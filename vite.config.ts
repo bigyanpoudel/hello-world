@@ -21,7 +21,7 @@ export default defineConfig({
         }
         if (filePath.includes("/dist/component")) {
           return {
-            filePath: filePath.replace("/component", ""),
+            filePath: filePath.replace("/dist/component", "/component"),
             content,
           };
         }

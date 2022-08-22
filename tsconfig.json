@@ -17,7 +17,6 @@
     "skipLibCheck": true,
      "esModuleInterop": true ,
      "declarationMap": true,
-     "outDir": "./dist/umd",
   },
   "include": ["./src/components"],
   "references": [{ "path": "./tsconfig.node.json" }],
