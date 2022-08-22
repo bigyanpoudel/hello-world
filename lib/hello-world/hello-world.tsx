@@ -1,4 +1,3 @@
-import React from "react";
 import { IHelloWorldProps } from "../types";
 
 export const HelloWorld = ({ text, className = "" }: IHelloWorldProps) => {
