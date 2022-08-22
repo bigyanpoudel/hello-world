@@ -16,7 +16,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "./lib/index.ts"),
       name: "MyLib",
       formats: ["umd", "es"],
-      fileName: (format) => `lib/index.${format}.js`,
+      fileName: (format) => `hello-world-v12.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

@@ -19,7 +19,7 @@
      "declarationMap": true,
     "baseUrl": ".",
      "paths": {
-      "@bigyanpoudel/lib": [ "./lib/index.ts" ]
+      "hello-world-v12": [ "./lib/index.ts" ]
     }
   },
   "include": ["./lib"],

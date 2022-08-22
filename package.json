@@ -1,16 +1,16 @@
 {
-  "name": "@bigyanpoudel/hello-world-v10",
+  "name": "hello-world-v12",
   "private": false,
   "version": "0.0.28",
   "type": "module",
   "description": "This is testing to create npm package",
-  "main": "./dist/lib/index.umd.js",
-  "module": "./dist/lib/index.es.js",
+  "main": "./dist/hello-world-v12.umd.js",
+  "module": "./dist/hello-world-v12.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib/index.umd.js",
-      "require": "./dist/lib/index.es.js"
+      "import": "./dist/hello-world-v12.umd.js",
+      "require": "./dist/hello-world-v12.es.js"
     }
   },
   "scripts": {
