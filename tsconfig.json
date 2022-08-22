@@ -12,17 +12,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "declaration": true,
+    "typeRoots": [
+      "./src/component/index.d.ts",
+      "node_modules/@types"
+    ],
     "skipLibCheck": true,
      "esModuleInterop": true ,
      "declarationMap": true,
-     "baseUrl": ".",
-     "paths": {
-      "@bigyanpoudel/hello-world-v10": ["src/*"]
-    }
+     "outDir": "./dist/umd"
   },
-  "include": ["lib"],
+  "include": ["./src/component"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules"]
 }

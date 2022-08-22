@@ -15,12 +15,9 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "esModuleInterop": true ,
-    "baseUrl": ".",
-    "paths": {
-     "@bigyanpoudel/hello-world-v10": ["src/*"]
-   }
+    "outDir": "./dist/es"
   },
-  "include": ["lib"],
+  "include": ["./src/component"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules"]
 }

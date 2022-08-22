@@ -1,9 +1,9 @@
+import React from "react";
 import "./App.css";
-import { HelloWorld } from "@bigyanpoudel/hello-world-v10";
 function App() {
   return (
     <div className="App">
-      <HelloWorld text="hello" />
+      <h1>hello</h1>
     </div>
   );
 }

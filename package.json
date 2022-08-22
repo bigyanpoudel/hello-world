@@ -4,21 +4,20 @@
   "version": "0.0.23",
   "type": "module",
   "description": "This is testing to create npm package",
-  "main": "./dist/@bigyanpoudel/hello-world-v10.es.js",
-  "module": "./dist/@bigyanpoudel/hello-world-v10.cjs.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/lib/umd/index.umd.js",
+  "module": "./dist/lib/esm/index.es.js",
+  "types": "./@types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/@bigyanpoudel/hello-world-v10.es.js",
-      "require": "./dist/@bigyanpoudel/hello-world-v10.cjs.js"
+      "import": "./dist/lib/umd/index.umd.js",
+      "require": "./dist/lib/esm/index.es.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "clean": "rm -rf dist",
-    "copy-files": "copyfiles -e  **/**.ts -e **/**.tsx -u ",
-    "tsc": "yarn run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "clean": "rm -rf dist && rm -rf @types",
+    "tsc": "yarn run clean && tsc -p tsconfig.json  && tsc -p tsconfig-cjs.json",
     "build": "yarn run tsc && vite build"
   },
   "files": [
