@@ -1,7 +1,7 @@
 {
   "name": "@bigyanpoudel/hello-world-v10",
   "private": false,
-  "version": "0.0.24",
+  "version": "0.0.25",
   "type": "module",
   "description": "This is testing to create npm package",
   "main": "./dist/lib/umd/index.umd.js",
