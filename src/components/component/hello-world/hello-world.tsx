@@ -1,7 +1,6 @@
-export interface IHelloWorldProps {
-  text: string;
-  className?: string;
-}
+import React from "react";
+import { IHelloWorldProps } from "../../@types";
+
 export const HelloWorld = ({ text, className = "" }: IHelloWorldProps) => {
   return <div className={className}>Hello worlds = {text}</div>;
 };

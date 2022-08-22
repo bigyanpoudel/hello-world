@@ -14,16 +14,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "typeRoots": [
-      "./src/component/index.d.ts",
-      "node_modules/@types"
-    ],
     "skipLibCheck": true,
      "esModuleInterop": true ,
      "declarationMap": true,
-     "outDir": "./dist/umd"
+     "outDir": "./dist/umd",
   },
-  "include": ["./src/component"],
+  "include": ["./src/components"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules"]
 }

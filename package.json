@@ -6,7 +6,7 @@
   "description": "This is testing to create npm package",
   "main": "./dist/lib/umd/index.umd.js",
   "module": "./dist/lib/esm/index.es.js",
-  "types": "./@types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/lib/umd/index.umd.js",

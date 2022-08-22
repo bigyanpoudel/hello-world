@@ -3,24 +3,35 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import dts from "vite-plugin-dts";
 import { existsSync, readdirSync, lstatSync, rmdirSync, unlinkSync } from "fs";
-emptyDir(path.resolve(__dirname, "types"));
+// emptyDir(path.resolve(__dirname, "types"));
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     dts({
       insertTypesEntry: true,
-      include: ["./src/component"],
-      beforeWriteFile: (filePath, content) => ({
-        filePath: filePath.replace("/dist", "/@types/"),
-        content,
-      }),
+      include: ["./src/components"],
+      beforeWriteFile: (filePath, content) => {
+        console.log("filePath", filePath);
+        if (filePath.includes("/dist/@types")) {
+          return {
+            filePath: filePath.replace("/dist/@types", "/@types/"),
+            content,
+          };
+        }
+        if (filePath.includes("/dist/component")) {
+          return {
+            filePath: filePath.replace("/component", ""),
+            content,
+          };
+        }
+      },
     }),
   ],
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "./src/component/index.ts"),
+      entry: path.resolve(__dirname, "./src/components/component/index.ts"),
       name: "MyLib",
       formats: ["umd", "es"],
       fileName: (format) =>
