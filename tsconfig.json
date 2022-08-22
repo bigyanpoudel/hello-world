@@ -17,8 +17,12 @@
     "skipLibCheck": true,
      "esModuleInterop": true ,
      "declarationMap": true,
+    "baseUrl": ".",
+     "paths": {
+      "@bigyanpoudel/lib": [ "./lib/index.ts" ]
+    }
   },
-  "include": ["./src/components"],
+  "include": ["./lib"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules"]
 }

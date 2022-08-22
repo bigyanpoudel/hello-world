@@ -1,24 +1,23 @@
 {
-  "name": "hello-world-v11",
+  "name": "@bigyanpoudel/hello-world-v10",
   "private": false,
-  "version": "0.0.27",
+  "version": "0.0.26",
   "type": "module",
   "description": "This is testing to create npm package",
-  "main": "./dist/lib/umd/index.umd.js",
-  "module": "./dist/lib/esm/index.es.js",
+  "main": "./dist/lib/index.umd.js",
+  "module": "./dist/lib/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib/umd/index.umd.js",
-      "require": "./dist/lib/esm/index.es.js"
+      "import": "./dist/lib/index.umd.js",
+      "require": "./dist/lib/index.es.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
     "clean": "rm -rf dist && rm -rf @types",
-    "tsc": "yarn run clean && tsc -p tsconfig.json  && tsc -p tsconfig-cjs.json",
-    "build": "yarn run tsc && vite build"
+    "build": " tsc && vite build"
   },
   "files": [
     "dist"
