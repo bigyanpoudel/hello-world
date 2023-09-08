@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "node:path";
+import path, { extname, relative, resolve } from 'path'
+import { fileURLToPath } from 'node:url'
+import { glob } from 'glob'
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
@@ -13,19 +15,31 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "./lib/index.ts"),
+      entry: resolve(__dirname, 'lib/index.ts'),
       name: "MyLib",
       formats: ["umd", "es"],
       fileName: (format) => `hello-world-v12.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react/jsx-runtime'],
+      input: Object.fromEntries(
+        // https://rollupjs.org/configuration-options/#input
+        glob.sync('lib/**/*.{ts,tsx}').map(file => [
+          // 1. The name of the entry point
+          // lib/nested/foo.js becomes nested/foo
+          relative(
+            'lib',
+            file.slice(0, file.length - extname(file).length)
+          ),
+          // 2. The absolute path to the entry file
+          // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+          fileURLToPath(new URL(file, import.meta.url))
+        ])
+      ),
       output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
-    },
+        assetFileNames: 'assets/[name][extname]',
+        entryFileNames: '[name].js',
+      }
+    }
   },
 });
